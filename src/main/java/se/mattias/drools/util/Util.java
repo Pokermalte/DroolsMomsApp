@@ -1,9 +1,12 @@
-package se.mattias.drools.services;
+package se.mattias.drools.util;
+
+import se.mattias.model.MittForetagBasinfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Util {
+
     public static List<String> hamtaSNI(String orgnr) {
         //Simulerar hämtning från beskattningsdatabasen
         List<String> snikoder = new ArrayList<>();
@@ -21,5 +24,11 @@ public class Util {
                 break;
         }
         return snikoder;
+    }
+
+    public static MittForetagBasinfo taEmotBasinfo(){
+        List<MittForetagBasinfo.Verksamhet> verksamheter = new ArrayList<>();
+        verksamheter.add(MittForetagBasinfo.Verksamhet.OVRIGT);
+        return new MittForetagBasinfo("969696-9696", "Företaget HB", verksamheter);
     }
 }

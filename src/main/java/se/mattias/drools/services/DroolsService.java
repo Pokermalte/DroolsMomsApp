@@ -8,7 +8,7 @@ import org.kie.api.runtime.StatelessKieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import se.mattias.drools.moms.Fakta;
+import se.mattias.drools.util.Util;
 import se.mattias.model.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -30,7 +30,7 @@ public class DroolsService {
     public Svar getSvar(Leverantorsfaktura leverantorsfaktura) {
 
         //Hämta basinfo
-        MittForetagBasinfo basinfo = Fakta.taEmotBasinfo();
+        MittForetagBasinfo basinfo = Util.taEmotBasinfo();
 
         //Hämta info om leverantörs verksamheter
         Leverantor leverantor = leverantorsfaktura.getLeverantor();
