@@ -34,7 +34,7 @@ public class DroolsService {
 
         //Hämta info om leverantörs verksamheter
         Leverantor leverantor = leverantorsfaktura.getLeverantor();
-        String momsregnr = leverantorsfaktura.getLeverantor().getMomsregnr();
+        String momsregnr = leverantor.getMomsregnr();
         try {
             LOG.debug("Hämtar SNI-koder för " + momsregnr);
             List<String> snikoder = Util.hamtaSNI(momsregnr);

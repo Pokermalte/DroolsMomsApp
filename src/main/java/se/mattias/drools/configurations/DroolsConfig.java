@@ -12,7 +12,7 @@ public class DroolsConfig{
     private KieServices ks = KieServices.Factory.get();
 
     @Bean
-    public KieServices kieServices(){return KieServices.Factory.get();}
+    public KieServices kieServices(){return ks;}
 
     @Bean
     public StatelessKieSession kieSession(){
